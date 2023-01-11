@@ -48,4 +48,13 @@ public class GameTest {
     rollMany(17, 0);
     assertThat(game.getScore(), is(16));
   }
+
+  @Test
+  public void oneStrike() {
+    game.roll(10);
+    game.roll(5);
+    game.roll(3);
+    rollMany(16, 0);
+    assertThat(game.getScore(), is(26));
+  }
 }
