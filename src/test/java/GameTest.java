@@ -23,6 +23,10 @@ public class GameTest {
     game.roll(5);
   }
 
+  private void rollStrike() {
+    game.roll(10);
+  }
+
   private void rollMany(int pins, int frames) {
     for (int i = 0; i < frames; i++) {
       game.roll(pins);
@@ -51,7 +55,7 @@ public class GameTest {
 
   @Test
   public void oneStrike() {
-    game.roll(10);
+    rollStrike();
     game.roll(5);
     game.roll(3);
     rollMany(16, 0);
