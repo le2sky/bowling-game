@@ -2,7 +2,6 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class GameTest {
@@ -15,12 +14,13 @@ public class GameTest {
   }
 
   @Test
-  public void canCreate() {
-  }
-
-  @Test
   public void canRoll() {
     game.roll(0);
+  }
+
+  private void rollSpare() {
+    game.roll(5);
+    game.roll(5);
   }
 
   private void rollMany(int pins, int frames) {
@@ -47,10 +47,5 @@ public class GameTest {
     game.roll(3);
     rollMany(17, 0);
     assertThat(game.getScore(), is(16));
-  }
-
-  private void rollSpare() {
-    game.roll(5);
-    game.roll(5);
   }
 }
