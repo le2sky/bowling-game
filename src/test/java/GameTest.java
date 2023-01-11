@@ -43,11 +43,14 @@ public class GameTest {
 
   @Test
   public void oneSpare() {
-    game.roll(5);
-    game.roll(5); //spare
+    rollSpare();
     game.roll(3);
-    game.roll(0);
     rollMany(17, 0);
     assertThat(game.getScore(), is(16));
+  }
+
+  private void rollSpare() {
+    game.roll(5);
+    game.roll(5); //spare
   }
 }
