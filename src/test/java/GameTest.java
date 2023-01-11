@@ -51,6 +51,6 @@ public class GameTest {
 
   private void rollSpare() {
     game.roll(5);
-    game.roll(5); //spare
+    game.roll(5);
   }
 }
