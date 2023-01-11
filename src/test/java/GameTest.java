@@ -31,4 +31,12 @@ public class GameTest {
 
     assertThat(game.getScore(), is(0));
   }
+
+  @Test
+  public void allOnes() {
+    for (int i = 0; i < 20; i++)
+      game.roll(1);
+
+    assertThat(game.getScore(), is(20));
+  }
 }
