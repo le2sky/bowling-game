@@ -41,7 +41,6 @@ public class GameTest {
     assertThat(game.getScore(), is(20));
   }
 
-  @Ignore
   @Test
   public void oneSpare() {
     game.roll(5);
