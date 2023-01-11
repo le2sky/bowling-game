@@ -39,4 +39,14 @@ public class GameTest {
     rollMany(1, 20);
     assertThat(game.getScore(), is(20));
   }
+
+  @Test
+  public void oneSpare() {
+    game.roll(5);
+    game.roll(5); //spare
+    game.roll(3);
+    game.roll(0);
+    rollMany(17, 0);
+    assertThat(game.getScore(), is(16));
+  }
 }
